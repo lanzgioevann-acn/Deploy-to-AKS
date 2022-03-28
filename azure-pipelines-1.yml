@@ -47,7 +47,7 @@ stages:
       artifact: manifests
 
 - stage: Deploy
-  displayName: Deploy to Dev
+  displayName: Deploy to default
   dependsOn: Build
 
   jobs:
