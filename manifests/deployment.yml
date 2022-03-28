@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lanzgioevannacndeploytoaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lanzgioevannacndeploytoaks
+  template:
+    metadata:
+      labels:
+        app: lanzgioevannacndeploytoaks 
+    spec:
+      containers:
+        - name: lanzgioevannacndeploytoaks 
+          image: kbsexamplesacr.azurecr.io/lanzgioevannacndeploytoaks
+          ports:
+          - containerPort: 80
